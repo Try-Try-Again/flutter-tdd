@@ -2,7 +2,6 @@ import 'package:clean_architecture_tdd_course/features/number_trivia/domain/enti
 import 'package:clean_architecture_tdd_course/core/usecases/usecase.dart';
 import 'package:dartz/dartz.dart';
 import 'package:clean_architecture_tdd_course/core/error/failures.dart';
-import 'package:equatable/equatable.dart';
 import '../repositories/number_trivia_repository.dart';
 
 class GetRandomNumberTrivia implements UseCase<NumberTrivia, NoParams> {
@@ -16,9 +15,3 @@ class GetRandomNumberTrivia implements UseCase<NumberTrivia, NoParams> {
   }
 }
 
-class NoParams extends Equatable {
-  NoParams();
-
-  @override
-  List<Object> get props => [];
-}

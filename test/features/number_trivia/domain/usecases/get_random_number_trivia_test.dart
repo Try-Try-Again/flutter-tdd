@@ -4,6 +4,7 @@ import 'package:mockito/mockito.dart';
 import 'package:clean_architecture_tdd_course/features/number_trivia/domain/usecases/get_random_number_trivia.dart';
 import 'package:clean_architecture_tdd_course/features/number_trivia/domain/repositories/number_trivia_repository.dart';
 import 'package:clean_architecture_tdd_course/features/number_trivia/domain/entities/number_trivia.dart';
+import 'package:clean_architecture_tdd_course/core/usecases/usecase.dart';
 
 class MockNumberTriviaRepository extends Mock implements NumberTriviaRepository {}
 
