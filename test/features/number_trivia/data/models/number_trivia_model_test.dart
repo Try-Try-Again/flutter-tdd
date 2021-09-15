@@ -13,7 +13,6 @@ void main() {
       expect(tNumberTriviaModel, isA<NumberTrivia>());
     },
   );
-
   group('fromJson', () {
     test(
       'should return a valid model when the JSON number is an integer',
@@ -21,6 +20,19 @@ void main() {
         // arrange
         final Map<String, dynamic> jsonMap =
             json.decode(fixture('trivia.json'));
+        // act
+        final result = NumberTriviaModel.fromJson(jsonMap);
+        // assert
+        expect(result, tNumberTriviaModel);
+      },
+    );
+
+    test(
+      'should return a valid model when the JSON number is a double',
+      () async {
+        // arrange
+        final Map<String, dynamic> jsonMap =
+            json.decode(fixture('trivia_double.json'));
         // act
         final result = NumberTriviaModel.fromJson(jsonMap);
         // assert
